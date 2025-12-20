@@ -8,6 +8,44 @@
     "home": "الرئيسية",
     "about": "حول",
     "contact": "اتصل بنا"
+  },
+  "dashboard": {
+    "title": "لوحة التحكم",
+    "frontDesk": "مكتب الاستقبال",
+    "reservation": "الحجوزات",
+    "rooms": "الغرف",
+    "guests": "النزلاء",
+    "staff": "الموظفين",
+    "housekeeping": "التدبير المنزلي",
+    "inventory": "المخزون",
+    "calendar": "التقويم",
+    "financials": "الماليات",
+    "reviews": "التقييمات",
+    "helloAdmin": "مرحباً مدير",
+    "searchPlaceholder": "ابحث هنا",
+    "dateRange": "٧ يناير ٢٠٢٦ - ١٤ يناير ٢٠٢٦",
+    "newBooking": "حجز جديد",
+    "checkIn": "تسجيل وصول",
+    "checkOut": "تسجيل مغادرة",
+    "totalRevenue": "إجمالي الإيرادات",
+    "fromLastMonth": "من الشهر الماضي",
+    "roomAvailability": "توفر الغرف",
+    "occupied": "مشغولة",
+    "reserved": "محجوزة",
+    "available": "متاحة",
+    "notReady": "غير جاهزة",
+    "revenue": "الإيرادات",
+    "lastMonths": "آخر ٤ أشهر",
+    "recentReservations": "الحجوزات الأخيرة",
+    "guest": "النزيل",
+    "room": "الغرفة",
+    "checkInDate": "تاريخ الوصول",
+    "checkOutDate": "تاريخ المغادرة",
+    "status": "الحالة",
+    "confirmed": "مؤكد",
+    "pending": "في الانتظار"
   }
 }
+
+
 

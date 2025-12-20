@@ -5,6 +5,7 @@ import { motion } from "motion/react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "next-themes";
 import { useEffect, useState } from "react";
+import Link from "next/link";
 
 export default function Home() {
   const t = useTranslations("common");
@@ -62,9 +63,11 @@ export default function Home() {
           </motion.div>
 
           <motion.div whileHover={{ scale: 1.05 }} whileTap={{ scale: 0.95 }}>
-            <Button variant="secondary" size="lg">
-              Secondary
-            </Button>
+            <Link href="/dashboard">
+              <Button variant="secondary" size="lg">
+                Go to Dashboard
+              </Button>
+            </Link>
           </motion.div>
         </motion.div>
 

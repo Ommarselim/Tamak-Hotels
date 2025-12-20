@@ -1,36 +1,166 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Tamak Hotels System 🏨
 
-## Getting Started
+A modern, professional hotel management system built with Next.js, featuring a beautiful dashboard interface based on Figma designs.
 
-First, run the development server:
+## ✨ Features
 
+- **🎨 Modern Dashboard UI** - Implemented from Figma designs with pixel-perfect accuracy
+- **📱 Fully Responsive** - Works seamlessly on desktop, tablet, and mobile devices
+- **🌍 Multi-language Support** - English and Arabic with RTL support
+- **🌙 Dark Mode** - Built-in theme switching capabilities
+- **📊 Real-time Statistics** - Dashboard with key hotel metrics
+- **🏠 Room Management** - Track room availability and status
+- **📅 Reservation System** - Manage bookings and check-ins/check-outs
+- **💰 Revenue Tracking** - Financial overview and reporting
+
+## 🚀 Getting Started
+
+### Prerequisites
+
+- Node.js 18+ 
+- npm, yarn, or pnpm
+
+### Installation
+
+1. Clone the repository:
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone <repository-url>
+cd tamak-hotels-system
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+2. Install dependencies:
+```bash
+npm install
+```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+3. Run the development server:
+```bash
+npm run dev
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+4. Open [http://localhost:3000](http://localhost:3000) in your browser
 
-## Learn More
+## 📱 Dashboard Features
 
-To learn more about Next.js, take a look at the following resources:
+### Main Dashboard (`/dashboard`)
+- **Statistics Cards**: New bookings, check-ins, check-outs, total revenue
+- **Room Availability Chart**: Visual representation of room statuses
+- **Revenue Chart**: Monthly revenue trends
+- **Recent Reservations**: Latest booking information
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Navigation
+- Dashboard Overview
+- Front Desk Operations
+- Reservations Management
+- Room Management
+- Guest Management
+- Staff Management
+- Housekeeping
+- Inventory
+- Calendar
+- Financials
+- Reviews
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## 🛠️ Tech Stack
 
-## Deploy on Vercel
+- **Framework**: Next.js 16.1.0 with App Router
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS 4.0
+- **UI Components**: shadcn/ui with Radix UI
+- **Icons**: Lucide React
+- **Animations**: Motion (Framer Motion)
+- **Internationalization**: next-intl
+- **Theme**: next-themes
+- **Design System**: Based on Figma designs
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## 🎨 Design Implementation
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+This project implements the "Tamak Hotel" Figma design with:
+
+- **Sidebar Navigation**: Clean, modern sidebar with icons and active states
+- **Dashboard Header**: Search functionality, date picker, user profile
+- **Statistics Cards**: Color-coded metrics with trend indicators
+- **Room Status**: Visual room availability tracking
+- **Responsive Layout**: Mobile-first design with collapsible sidebar
+
+## 🌍 Internationalization
+
+The system supports:
+- **English** (default)
+- **Arabic** with RTL layout support
+
+Language files are located in `/messages/`:
+- `en.json` - English translations
+- `ar.json` - Arabic translations
+
+## 📁 Project Structure
+
+```
+tamak-hotels-system/
+├── app/
+│   ├── [locale]/
+│   │   ├── dashboard/
+│   │   │   └── page.tsx          # Dashboard page
+│   │   ├── layout.tsx            # Locale layout
+│   │   └── page.tsx              # Home page
+│   ├── globals.css               # Global styles
+│   └── layout.tsx                # Root layout
+├── components/
+│   ├── ui/                       # shadcn/ui components
+│   ├── admin-sidebar.tsx         # Navigation sidebar
+│   ├── dashboard-header.tsx      # Dashboard header
+│   ├── dashboard-layout.tsx      # Main dashboard layout
+│   └── stats-card.tsx           # Statistics card component
+├── messages/                     # Internationalization
+│   ├── ar.json                   # Arabic translations
+│   └── en.json                   # English translations
+└── lib/
+    └── utils.ts                  # Utility functions
+```
+
+## 🎯 Key Components
+
+### AdminSidebar
+- Responsive navigation menu
+- Active state management
+- Mobile-friendly with overlay
+- Internationalized menu items
+
+### DashboardHeader
+- Search functionality
+- Date range picker
+- User profile dropdown
+- Mobile hamburger menu
+
+### StatsCard
+- Reusable statistics display
+- Trend indicators
+- Color variants
+- Responsive design
+
+### DashboardLayout
+- Main layout wrapper
+- Mobile state management
+- Grid-based responsive design
+- Statistics and charts integration
+
+## 🚀 Deployment
+
+The project is ready for deployment on platforms like:
+
+- **Vercel** (recommended)
+- **Netlify**
+- **Railway**
+- **Docker**
+
+## 📝 License
+
+This project is licensed under the MIT License.
+
+## 🤝 Contributing
+
+Contributions are welcome! Please feel free to submit a Pull Request.
+
+## 📞 Support
+
+For support and questions, please open an issue in the repository.

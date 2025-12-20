@@ -8,6 +8,44 @@
     "home": "Home",
     "about": "About",
     "contact": "Contact"
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "frontDesk": "Front Desk",
+    "reservation": "Reservation",
+    "rooms": "Rooms",
+    "guests": "Guests",
+    "staff": "Staff",
+    "housekeeping": "Housekeeping",
+    "inventory": "Inventory",
+    "calendar": "Calendar",
+    "financials": "Financials",
+    "reviews": "Reviews",
+    "helloAdmin": "Hello admin",
+    "searchPlaceholder": "Search here",
+    "dateRange": "07 Jan 2026 - 14 Jan 2026",
+    "newBooking": "New Booking",
+    "checkIn": "Check-In",
+    "checkOut": "Check-Out",
+    "totalRevenue": "Total Revenue",
+    "fromLastMonth": "from last month",
+    "roomAvailability": "Room Availability",
+    "occupied": "Occupied",
+    "reserved": "Reserved",
+    "available": "Available",
+    "notReady": "Not Ready",
+    "revenue": "Revenue",
+    "lastMonths": "Last 4 months",
+    "recentReservations": "Recent Reservations",
+    "guest": "Guest",
+    "room": "Room",
+    "checkInDate": "Check-in",
+    "checkOutDate": "Check-out",
+    "status": "Status",
+    "confirmed": "Confirmed",
+    "pending": "Pending"
   }
 }
+
+
 
