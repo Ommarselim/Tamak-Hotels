@@ -1,0 +1,13 @@
+{
+  "common": {
+    "welcome": "مرحبا",
+    "hello": "مرحبا",
+    "welcomeBack": "مرحبا بعودتك"
+  },
+  "navigation": {
+    "home": "الرئيسية",
+    "about": "حول",
+    "contact": "اتصل بنا"
+  }
+}
+

@@ -1,0 +1,13 @@
+{
+  "common": {
+    "welcome": "Welcome",
+    "hello": "Hello",
+    "welcomeBack": "Welcome back"
+  },
+  "navigation": {
+    "home": "Home",
+    "about": "About",
+    "contact": "Contact"
+  }
+}
+
