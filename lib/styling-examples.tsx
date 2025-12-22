@@ -1,6 +1,6 @@
 /**
  * Example: How to Style a New Component
- * 
+ *
  * This file demonstrates the styling approach with real examples
  */
 
@@ -60,26 +60,32 @@ export function ExampleTable() {
 // EXAMPLE 3: Using TypeScript Config
 // ============================================
 
-export function ExampleButton({ variant = "primary" }: { variant?: "primary" | "secondary" }) {
+export function ExampleButton({
+  variant = "primary",
+}: {
+  variant?: "primary" | "secondary";
+}) {
   const buttonClasses = cn(
     theme.commonClasses.button,
     "px-4 py-2 rounded-lg font-medium transition-colors",
-    variant === "primary" && "bg-[var(--brand-primary)] text-white hover:opacity-90",
-    variant === "secondary" && "bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white"
+    variant === "primary" &&
+      "bg-[var(--brand-primary)] text-white hover:opacity-90",
+    variant === "secondary" &&
+      "bg-gray-100 dark:bg-gray-700 text-gray-900 dark:text-white"
   );
 
-  return (
-    <button className={buttonClasses}>
-      Click Me
-    </button>
-  );
+  return <button className={buttonClasses}>Click Me</button>;
 }
 
 // ============================================
 // EXAMPLE 4: Conditional Styling with cn()
 // ============================================
 
-export function ExampleStatusBadge({ status }: { status: "confirmed" | "pending" | "cancelled" }) {
+export function ExampleStatusBadge({
+  status,
+}: {
+  status: "confirmed" | "pending" | "cancelled";
+}) {
   return (
     <span
       className={cn(
@@ -103,10 +109,9 @@ export function ExampleResponsiveCard() {
     <div className="card-primary p-4 lg:p-6">
       {/* Mobile: column, Desktop: row */}
       <div className="flex flex-col lg:flex-row gap-4 lg:gap-6">
-        
         {/* Image */}
         <div className="w-full lg:w-48 h-32 bg-gray-200 dark:bg-gray-700 rounded-lg" />
-        
+
         {/* Content */}
         <div className="flex-1">
           <h3 className="text-heading text-lg lg:text-xl mb-2">
@@ -115,7 +120,7 @@ export function ExampleResponsiveCard() {
           <p className="text-body text-sm lg:text-base mb-4">
             Spacious room with private balcony overlooking the ocean.
           </p>
-          
+
           {/* Features */}
           <div className="flex flex-wrap gap-2">
             <span className="bg-gray-100 dark:bg-gray-700 text-gray-700 dark:text-gray-300 px-3 py-1 rounded-full text-xs">
@@ -129,7 +134,7 @@ export function ExampleResponsiveCard() {
             </span>
           </div>
         </div>
-        
+
         {/* Price */}
         <div className="text-right lg:text-left lg:w-32">
           <p className="text-muted text-xs mb-1">From</p>
@@ -169,21 +174,21 @@ export function ExampleInput() {
 
 /**
  * 1. Always include dark mode variants: dark:bg-gray-800
- * 
+ *
  * 2. Use semantic utility classes: .card-primary, .text-heading
- * 
+ *
  * 3. Follow the color scale:
  *    - Headings: text-gray-900 dark:text-white
  *    - Body: text-gray-600 dark:text-gray-300
  *    - Muted: text-gray-400 dark:text-gray-500
- * 
+ *
  * 4. Use cn() for conditional classes
- * 
+ *
  * 5. Check theme-config.ts for constants
- * 
+ *
  * 6. Create utility class if pattern repeats 3+ times
- * 
+ *
  * 7. Be consistent with spacing: p-4, gap-4, mb-4
- * 
+ *
  * 8. Use responsive prefixes: sm:, md:, lg:, xl:
  */

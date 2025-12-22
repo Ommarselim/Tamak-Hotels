@@ -3,6 +3,7 @@
 ## 📚 Overview
 
 Our styling system uses a **hybrid approach** combining:
+
 1. **CSS Variables** (Design Tokens)
 2. **Tailwind CSS** (Utility-First)
 3. **Utility Classes** (Custom Reusable)
@@ -15,6 +16,7 @@ This is the **modern best practice** for scalable, maintainable applications.
 ## 🎨 Styling Architecture
 
 ### 1. **CSS Variables (Design Tokens)**
+
 **Location**: `app/globals.css`
 
 ```css
@@ -32,12 +34,14 @@ This is the **modern best practice** for scalable, maintainable applications.
 ```
 
 **✅ Pros:**
+
 - Single source of truth
 - Automatic dark mode switching
 - Runtime changes possible
 - Semantic naming
 
 **📖 Use for:**
+
 - Core color palette
 - Theme-specific values
 - Brand colors
@@ -45,6 +49,7 @@ This is the **modern best practice** for scalable, maintainable applications.
 ---
 
 ### 2. **Tailwind CSS Utility Classes**
+
 **What we use**: `bg-white`, `dark:bg-gray-800`, `text-gray-600`
 
 ```tsx
@@ -52,12 +57,14 @@ This is the **modern best practice** for scalable, maintainable applications.
 ```
 
 **✅ Pros:**
+
 - Fast development
 - Consistent spacing/colors
 - Built-in responsive design
 - Dark mode with `dark:` prefix
 
 **📖 Use for:**
+
 - Layout and spacing
 - Most component styling
 - Responsive design
@@ -66,6 +73,7 @@ This is the **modern best practice** for scalable, maintainable applications.
 ---
 
 ### 3. **Custom Utility Classes**
+
 **Location**: `app/globals.css`
 
 ```css
@@ -87,12 +95,14 @@ This is the **modern best practice** for scalable, maintainable applications.
 ```
 
 **✅ Pros:**
+
 - DRY (Don't Repeat Yourself)
 - Easier refactoring
 - Consistent patterns
 - Shorter class strings
 
 **📖 Use for:**
+
 - Frequently repeated combinations
 - Component-specific patterns
 - Complex multi-class patterns
@@ -100,10 +110,11 @@ This is the **modern best practice** for scalable, maintainable applications.
 ---
 
 ### 4. **TypeScript Configuration**
+
 **Location**: `lib/theme-config.ts`
 
 ```typescript
-import { theme } from '@/lib/theme-config';
+import { theme } from "@/lib/theme-config";
 
 // Type-safe constants
 const cardClass = theme.commonClasses.card;
@@ -111,12 +122,14 @@ const spacing = theme.spacing.lg;
 ```
 
 **✅ Pros:**
+
 - Type safety
 - Autocomplete
 - Easy to find usages
 - Can be computed/dynamic
 
 **📖 Use for:**
+
 - Shared constants
 - Component sizes
 - Animation durations
@@ -143,12 +156,14 @@ Component Props (highest level)
 ### **Principle 2: Start Specific, Abstract When Repeated**
 
 **❌ Bad (Too abstract too soon):**
+
 ```tsx
 // Abstracting on first use
 <div className="hotel-card">
 ```
 
 **✅ Good (Abstract after repetition):**
+
 ```tsx
 // First use - use Tailwind
 <div className="bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg p-4">
@@ -180,18 +195,18 @@ Component Props (highest level)
 
 ### **Standard Color Scale**
 
-| Element | Light Mode | Dark Mode |
-|---------|------------|-----------|
-| **Backgrounds** |
-| Primary Surface | `bg-white` | `dark:bg-gray-800` |
-| Secondary Surface | `bg-gray-50` | `dark:bg-gray-900` |
-| **Text** |
-| Heading | `text-gray-900` | `dark:text-white` |
-| Body | `text-gray-600` | `dark:text-gray-300` |
-| Muted | `text-gray-400` | `dark:text-gray-500` |
-| **Borders** |
-| Standard | `border-gray-200` | `dark:border-gray-700` |
-| Subtle | `border-gray-100` | `dark:border-gray-800` |
+| Element           | Light Mode        | Dark Mode              |
+| ----------------- | ----------------- | ---------------------- |
+| **Backgrounds**   |
+| Primary Surface   | `bg-white`        | `dark:bg-gray-800`     |
+| Secondary Surface | `bg-gray-50`      | `dark:bg-gray-900`     |
+| **Text**          |
+| Heading           | `text-gray-900`   | `dark:text-white`      |
+| Body              | `text-gray-600`   | `dark:text-gray-300`   |
+| Muted             | `text-gray-400`   | `dark:text-gray-500`   |
+| **Borders**       |
+| Standard          | `border-gray-200` | `dark:border-gray-700` |
+| Subtle            | `border-gray-100` | `dark:border-gray-800` |
 
 ---
 
@@ -201,7 +216,7 @@ Component Props (highest level)
 
 ```tsx
 // Check globals.css for existing utilities
-import { theme } from '@/lib/theme-config';
+import { theme } from "@/lib/theme-config";
 
 export function NewCard() {
   return (
@@ -240,6 +255,7 @@ export function CustomComponent() {
 ## 🎯 Quick Reference
 
 ### **Import Pattern**
+
 ```tsx
 // For TypeScript constants
 import { theme } from '@/lib/theme-config';
@@ -278,7 +294,9 @@ import { cn } from '@/lib/utils';
 ## 🚀 Maintainability Benefits
 
 ### **1. Easy Theme Updates**
+
 Change CSS variable in one place → affects entire app
+
 ```css
 :root {
   --brand-primary: #NEW_COLOR; /* Update once */
@@ -286,13 +304,17 @@ Change CSS variable in one place → affects entire app
 ```
 
 ### **2. Consistent Dark Mode**
+
 All components automatically support dark mode
+
 ```tsx
-className="bg-white dark:bg-gray-800" // Always works
+className = "bg-white dark:bg-gray-800"; // Always works
 ```
 
 ### **3. Easy Refactoring**
+
 Search for utility class → update in one place
+
 ```bash
 # Find all uses
 grep -r "card-primary" ./components
@@ -302,6 +324,7 @@ grep -r "card-primary" ./components
 ```
 
 ### **4. Developer Experience**
+
 - Autocomplete for theme values
 - Type safety with TypeScript config
 - Quick copy-paste patterns
@@ -342,16 +365,16 @@ lib/
 ```
 1. CSS Variables (--brand-primary)
    ↓ Foundation layer
-   
+
 2. Tailwind Utilities (bg-white, text-gray-600)
    ↓ Building blocks
-   
+
 3. Custom Utilities (.card-primary, .text-heading)
    ↓ Reusable patterns
-   
+
 4. Component Styles (inline className combinations)
    ↓ Component-specific
-   
+
 5. Component Props (variant="primary")
    ↓ API layer
 ```
@@ -365,9 +388,10 @@ We're using the **industry-standard modern approach**:
 ✅ **CSS Variables** → Theme consistency  
 ✅ **Tailwind CSS** → Fast development  
 ✅ **Utility Classes** → Reusable patterns  
-✅ **TypeScript Config** → Type safety  
+✅ **TypeScript Config** → Type safety
 
 This is the same approach used by:
+
 - GitHub
 - Vercel
 - Stripe Dashboard
