@@ -5,6 +5,7 @@ import { cn } from "@/lib/utils";
 import { Search, Calendar, Bell, ChevronDown, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { LanguageSwitcher } from "@/components/language-switcher";
+import { ThemeSwitcher } from "@/components/theme-switcher";
 
 interface DashboardHeaderProps {
   className?: string;
@@ -107,6 +108,7 @@ export function DashboardHeader({
 
         {/* Action Buttons */}
         <div className="flex items-center gap-1 lg:gap-2">
+          <ThemeSwitcher />
           <LanguageSwitcher />
           <Button
             variant="outline"

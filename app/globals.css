@@ -1,5 +1,12 @@
 @import "tailwindcss";
 
+@variant dark (.dark &);
+
+@theme {
+  --color-brand-primary: oklch(0.45 0.1 45);
+  --color-brand-accent: oklch(0.65 0.15 45);
+}
+
 @layer base {
   :root {
     --background: 0 0% 100%;
@@ -99,4 +106,102 @@
 
 [dir="ltr"] {
   direction: ltr;
+}
+
+/* ============================================
+   CUSTOM COLOR TOKENS - Hotel System Specific
+   ============================================ */
+
+:root {
+  /* Brand Colors - Using Tailwind's semantic colors */
+  --brand-primary: 146 64 14; /* amber-700 */
+  --brand-primary-hover: 120 53 15; /* amber-800 */
+  --brand-accent: 217 119 6; /* amber-600 */
+  --brand-highlight: 254 243 199; /* amber-50 */
+  
+  /* Functional Colors */
+  --surface-primary: 255 255 255; /* white */
+  --surface-secondary: 249 250 251; /* gray-50 */
+  --text-primary: 17 24 39; /* gray-900 */
+  --text-secondary: 75 85 99; /* gray-600 */
+  --text-muted: 156 163 175; /* gray-400 */
+  --border-color: 229 231 235; /* gray-200 */
+}
+
+.dark {
+  /* Brand Colors - Dark Mode */
+  --brand-primary: 251 191 36; /* amber-400 */
+  --brand-primary-hover: 245 158 11; /* amber-500 */
+  --brand-accent: 217 119 6; /* amber-600 */
+  --brand-highlight: 69 26 3; /* amber-950 */
+  
+  /* Functional Colors - Dark Mode */
+  --surface-primary: 31 41 55; /* gray-800 */
+  --surface-secondary: 17 24 39; /* gray-900 */
+  --text-primary: 255 255 255; /* white */
+  --text-secondary: 209 213 219; /* gray-300 */
+  --text-muted: 156 163 175; /* gray-400 */
+  --border-color: 55 65 81; /* gray-700 */
+}
+
+/* ============================================
+   UTILITY CLASSES - Reusable Components
+   ============================================ */
+
+/* Card Styles */
+.card-primary {
+  @apply bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg;
+}
+
+.card-highlighted {
+  @apply bg-[#eae2d7] dark:bg-[#3a3530] rounded-lg;
+}
+
+/* Text Styles */
+.text-heading {
+  @apply text-gray-900 dark:text-white font-semibold;
+}
+
+.text-body {
+  @apply text-gray-600 dark:text-gray-300;
+}
+
+.text-muted {
+  @apply text-gray-400 dark:text-gray-500;
+}
+
+/* Button Styles */
+.btn-action {
+  @apply bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700;
+}
+
+/* Input Styles */
+.input-field {
+  @apply bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 text-gray-600 dark:text-gray-300;
+}
+
+/* Status Badge Styles */
+.badge-success {
+  @apply bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300;
+}
+
+.badge-warning {
+  @apply bg-yellow-100 dark:bg-yellow-900/30 text-yellow-800 dark:text-yellow-300;
+}
+
+.badge-error {
+  @apply bg-red-100 dark:bg-red-900/30 text-red-800 dark:text-red-300;
+}
+
+/* Layout Styles */
+.layout-sidebar {
+  @apply bg-white dark:bg-gray-900 border-gray-200 dark:border-gray-800;
+}
+
+.layout-header {
+  @apply bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800;
+}
+
+.layout-main {
+  @apply bg-gray-50 dark:bg-gray-900;
 }

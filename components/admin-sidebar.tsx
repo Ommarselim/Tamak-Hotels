@@ -142,8 +142,8 @@ export function AdminSidebar({
         )}
       >
         {/* Logo */}
-        <div className="flex items-center justify-center p-4 border-b border-gray-100 dark:border-gray-800">
-          <h1 className="font-bold text-2xl text-[#5d3f36] dark:text-[#d4a574] font-serif">
+        <div className="flex items-center justify-center p-4 border-b border-gray-200 dark:border-gray-800">
+          <h1 className="font-bold text-2xl text-amber-800 dark:text-amber-400 font-serif">
             TAMAK
           </h1>
         </div>
@@ -159,8 +159,8 @@ export function AdminSidebar({
                 className={cn(
                   "flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors",
                   item.active
-                    ? "bg-[#ad8662] text-white"
-                    : "text-[#afb2ae] hover:text-[#5d3f36] dark:hover:text-[#d4a574] hover:bg-gray-50 dark:hover:bg-gray-800"
+                    ? "bg-amber-700 dark:bg-amber-800 text-white"
+                    : "text-gray-600 dark:text-gray-400 hover:text-amber-800 dark:hover:text-amber-400 hover:bg-gray-100 dark:hover:bg-gray-800"
                 )}
               >
                 <Icon className="w-5 h-5 shrink-0" />
