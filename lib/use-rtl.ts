@@ -9,7 +9,7 @@ import { useParams } from "next/navigation";
 export function useIsRTL(): boolean {
   const params = useParams();
   const locale = params.locale as string;
-  
+
   // Arabic is RTL
   return locale === "ar";
 }

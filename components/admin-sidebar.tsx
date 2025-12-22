@@ -32,12 +32,12 @@ interface AdminSidebarProps {
   onClose?: () => void;
 }
 
-export function AdminSidebar({ 
-  className, 
-  activeItem = "dashboard", 
-  isMobile = false, 
-  isOpen = true, 
-  onClose 
+export function AdminSidebar({
+  className,
+  activeItem = "dashboard",
+  isMobile = false,
+  isOpen = true,
+  onClose,
 }: AdminSidebarProps) {
   const t = useTranslations("dashboard");
   const isRTL = useIsRTL();
@@ -115,55 +115,61 @@ export function AdminSidebar({
     <>
       {/* Mobile overlay */}
       {isMobile && isOpen && (
-        <div 
+        <div
           className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
           onClick={onClose}
         />
       )}
-      
+
       <div
         className={cn(
           "bg-white dark:bg-gray-900 dark:border-gray-800 overflow-hidden relative w-[261px] h-full transition-transform duration-300 ease-in-out",
           // RTL: border-left and rounded-left corners, LTR: border-right and rounded-right corners
-          isRTL ? "border-l border-gray-200 rounded-bl-[10px] rounded-tl-[10px]" : "border-r border-gray-200 rounded-br-[10px] rounded-tr-[10px]",
+          isRTL
+            ? "border-l border-gray-200 rounded-bl-[10px] rounded-tl-[10px]"
+            : "border-r border-gray-200 rounded-br-[10px] rounded-tr-[10px]",
           // Mobile positioning
-          isMobile && isRTL && "fixed right-0 top-0 z-50 lg:relative lg:translate-x-0",
-          isMobile && !isRTL && "fixed left-0 top-0 z-50 lg:relative lg:translate-x-0",
+          isMobile &&
+            isRTL &&
+            "fixed right-0 top-0 z-50 lg:relative lg:translate-x-0",
+          isMobile &&
+            !isRTL &&
+            "fixed left-0 top-0 z-50 lg:relative lg:translate-x-0",
           // Mobile slide animation
           isMobile && !isOpen && isRTL && "translate-x-full",
           isMobile && !isOpen && !isRTL && "-translate-x-full",
           className
         )}
       >
-      {/* Logo */}
-      <div className="flex items-center justify-center p-4 border-b border-gray-100 dark:border-gray-800">
-        <h1 className="font-bold text-2xl text-[#5d3f36] dark:text-[#d4a574] font-serif">
-          TAMAK
-        </h1>
-      </div>
+        {/* Logo */}
+        <div className="flex items-center justify-center p-4 border-b border-gray-100 dark:border-gray-800">
+          <h1 className="font-bold text-2xl text-[#5d3f36] dark:text-[#d4a574] font-serif">
+            TAMAK
+          </h1>
+        </div>
 
-      {/* Navigation */}
-      <div className="flex flex-col gap-2 p-4 pt-6">
-        {sidebarItems.map((item) => {
-          const Icon = item.icon;
-          return (
-            <a
-              key={item.key}
-              href={item.href}
-              className={cn(
-                "flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors",
-                item.active
-                  ? "bg-[#ad8662] text-white"
-                  : "text-[#afb2ae] hover:text-[#5d3f36] dark:hover:text-[#d4a574] hover:bg-gray-50 dark:hover:bg-gray-800"
-              )}
-            >
-              <Icon className="w-5 h-5 shrink-0" />
-              <span>{t(item.key)}</span>
-            </a>
-          );
-        })}
+        {/* Navigation */}
+        <div className="flex flex-col gap-2 p-4 pt-6">
+          {sidebarItems.map((item) => {
+            const Icon = item.icon;
+            return (
+              <a
+                key={item.key}
+                href={item.href}
+                className={cn(
+                  "flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors",
+                  item.active
+                    ? "bg-[#ad8662] text-white"
+                    : "text-[#afb2ae] hover:text-[#5d3f36] dark:hover:text-[#d4a574] hover:bg-gray-50 dark:hover:bg-gray-800"
+                )}
+              >
+                <Icon className="w-5 h-5 shrink-0" />
+                <span>{t(item.key)}</span>
+              </a>
+            );
+          })}
+        </div>
       </div>
-    </div>
     </>
   );
 }

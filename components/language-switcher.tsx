@@ -31,23 +31,27 @@ export function LanguageSwitcher() {
         <Button
           variant="outline"
           size="icon"
-          className="w-8 h-8 lg:w-9 lg:h-9 bg-white border-gray-200"
+          className="w-8 h-8 lg:w-9 lg:h-9 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700"
           disabled={isPending}
         >
-          <Globe className="w-4 h-4 lg:w-5 lg:h-5 text-gray-600" />
+          <Globe className="w-4 h-4 lg:w-5 lg:h-5 text-gray-600 dark:text-gray-400" />
           <span className="sr-only">Switch language</span>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem
           onClick={() => onSelectChange("en")}
-          className={currentLocale === "en" ? "bg-gray-100" : ""}
+          className={
+            currentLocale === "en" ? "bg-gray-100 dark:bg-gray-800" : ""
+          }
         >
           <span className="mr-2">🇬🇧</span> English
         </DropdownMenuItem>
         <DropdownMenuItem
           onClick={() => onSelectChange("ar")}
-          className={currentLocale === "ar" ? "bg-gray-100" : ""}
+          className={
+            currentLocale === "ar" ? "bg-gray-100 dark:bg-gray-800" : ""
+          }
         >
           <span className="mr-2">🇸🇦</span> العربية
         </DropdownMenuItem>

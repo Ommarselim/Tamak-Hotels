@@ -28,7 +28,12 @@ export function DashboardHeader({
   const t = useTranslations("dashboard");
 
   return (
-    <div className={cn("flex items-center justify-between gap-4 p-4 lg:p-6 bg-gray-50", className)}>
+    <div
+      className={cn(
+        "flex items-center justify-between gap-4 p-4 lg:p-6 bg-gray-50 dark:bg-gray-900 border-b border-gray-200 dark:border-gray-800",
+        className
+      )}
+    >
       {/* Mobile menu button */}
       <Button
         variant="outline"
@@ -43,30 +48,30 @@ export function DashboardHeader({
       <div className="flex items-center gap-4 lg:gap-6 flex-1 min-w-0">
         {/* Title Section */}
         <div className="flex flex-col gap-1 min-w-0">
-          <h1 className="text-2xl lg:text-3xl font-semibold text-black truncate">
+          <h1 className="text-2xl lg:text-3xl font-semibold text-black dark:text-white truncate">
             {title || t("title")}
           </h1>
-          <p className="text-sm text-gray-400 hidden sm:block">
+          <p className="text-sm text-gray-400 dark:text-gray-500 hidden sm:block">
             {subtitle || t("helloAdmin")}
           </p>
         </div>
 
         {/* Search Input - Hidden on mobile */}
-        <div className="hidden md:flex items-center gap-3 bg-white border border-gray-200 rounded-lg px-5 py-3 w-64 lg:w-96">
-          <Search className="w-5 h-5 text-gray-400" />
+        <div className="hidden md:flex items-center gap-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-5 py-3 w-64 lg:w-96">
+          <Search className="w-5 h-5 text-gray-400 dark:text-gray-500" />
           <input
             type="text"
             placeholder={t("searchPlaceholder")}
-            className="flex-1 text-sm text-gray-600 bg-transparent outline-none placeholder:text-gray-400"
+            className="flex-1 text-sm text-gray-600 dark:text-gray-300 bg-transparent outline-none placeholder:text-gray-400 dark:placeholder:text-gray-500"
           />
         </div>
 
         {/* Date Range Picker - Hidden on mobile */}
-        <div className="hidden lg:flex items-center gap-3 bg-white border border-gray-200 rounded-lg px-5 py-3">
-          <span className="text-sm text-gray-600 whitespace-nowrap">
+        <div className="hidden lg:flex items-center gap-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded-lg px-5 py-3">
+          <span className="text-sm text-gray-600 dark:text-gray-300 whitespace-nowrap">
             {t("dateRange")}
           </span>
-          <Calendar className="w-5 h-5 text-gray-400" />
+          <Calendar className="w-5 h-5 text-gray-400 dark:text-gray-500" />
         </div>
       </div>
 
@@ -74,7 +79,7 @@ export function DashboardHeader({
       <div className="flex items-center gap-2 lg:gap-5">
         {/* User Profile - Simplified on mobile */}
         <div className="flex items-center gap-2 lg:gap-3">
-          <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-gray-300 overflow-hidden">
+          <div className="w-10 h-10 lg:w-12 lg:h-12 rounded-full bg-gray-300 dark:bg-gray-700 overflow-hidden">
             {userAvatar ? (
               <img
                 src={userAvatar}
@@ -89,10 +94,14 @@ export function DashboardHeader({
           </div>
           <div className="hidden sm:flex flex-col">
             <div className="flex items-center gap-1">
-              <span className="text-sm font-medium text-gray-900">{userName}</span>
-              <ChevronDown className="w-4 h-4 text-gray-400" />
+              <span className="text-sm font-medium text-gray-900 dark:text-gray-100">
+                {userName}
+              </span>
+              <ChevronDown className="w-4 h-4 text-gray-400 dark:text-gray-500" />
             </div>
-            <span className="text-sm text-gray-400">{userRole}</span>
+            <span className="text-sm text-gray-400 dark:text-gray-500">
+              {userRole}
+            </span>
           </div>
         </div>
 
@@ -102,9 +111,9 @@ export function DashboardHeader({
           <Button
             variant="outline"
             size="icon"
-            className="w-8 h-8 lg:w-9 lg:h-9 bg-white border-gray-200 relative"
+            className="w-8 h-8 lg:w-9 lg:h-9 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 relative"
           >
-            <Bell className="w-4 h-4 lg:w-5 lg:h-5 text-gray-600" />
+            <Bell className="w-4 h-4 lg:w-5 lg:h-5 text-gray-600 dark:text-gray-400" />
             <div className="absolute top-1 right-1 lg:top-2 lg:right-2 w-2 h-2 bg-red-500 rounded-full" />
           </Button>
         </div>
