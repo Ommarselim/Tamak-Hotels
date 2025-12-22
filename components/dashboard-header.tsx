@@ -2,8 +2,9 @@
 
 import { useTranslations } from "next-intl";
 import { cn } from "@/lib/utils";
-import { Search, Calendar, Globe, Bell, ChevronDown, Menu } from "lucide-react";
+import { Search, Calendar, Bell, ChevronDown, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { LanguageSwitcher } from "@/components/language-switcher";
 
 interface DashboardHeaderProps {
   className?: string;
@@ -97,13 +98,7 @@ export function DashboardHeader({
 
         {/* Action Buttons */}
         <div className="flex items-center gap-1 lg:gap-2">
-          <Button
-            variant="outline"
-            size="icon"
-            className="w-8 h-8 lg:w-9 lg:h-9 bg-white border-gray-200 hidden sm:flex"
-          >
-            <Globe className="w-4 h-4 lg:w-5 lg:h-5 text-gray-600" />
-          </Button>
+          <LanguageSwitcher />
           <Button
             variant="outline"
             size="icon"

@@ -79,7 +79,7 @@ export function DashboardLayout({ children, activeItem = "dashboard" }: Dashboar
   ];
 
   return (
-    <div className="flex h-screen bg-gray-50">
+    <div className="flex h-screen bg-gray-50 dark:bg-gray-900">
       {/* Sidebar */}
       <AdminSidebar 
         activeItem={activeItem} 
@@ -90,7 +90,7 @@ export function DashboardLayout({ children, activeItem = "dashboard" }: Dashboar
       />
 
       {/* Main Content */}
-      <div className="flex-1 flex flex-col overflow-hidden">
+      <div className="flex-1 flex flex-col overflow-hidden min-w-0">{/* Header */}
         {/* Header */}
         <DashboardHeader 
           onMenuClick={() => setIsMobileMenuOpen(true)}
