@@ -1,0 +1,175 @@
+/**
+ * CSS Custom Properties (Variables)
+ * These can be used throughout the application for theming
+ * and can be dynamically changed for dark mode support
+ */
+
+:root {
+  /* ============================================
+     PRIMARY COLORS
+     ============================================ */
+  --color-primary-50: #f7f3ef;
+  --color-primary-100: #eae2d7;
+  --color-primary-200: #d7c6b1;
+  --color-primary-300: #c0a384;
+  --color-primary-400: #ad8662;
+  --color-primary-500: #966f50;
+  --color-primary-600: #875e47;
+  --color-primary-700: #6d493b;
+  --color-primary-800: #5d3f36;
+  --color-primary-900: #513732;
+  --color-primary-950: #2e1d1a;
+
+  /* ============================================
+     SECONDARY COLORS
+     ============================================ */
+  --color-secondary-olive: #528748;
+  --color-secondary-red-brown: #875448;
+  --color-secondary-clear-brown: #877348;
+  --color-secondary-mint: #488787;
+
+  /* ============================================
+     NEUTRAL COLORS
+     ============================================ */
+  --color-neutral-50: #f6f6f5;
+  --color-neutral-100: #e7e7e6;
+  --color-neutral-200: #d0d2cf;
+  --color-neutral-300: #afb2ae;
+  --color-neutral-400: #888a86;
+  --color-neutral-500: #6d6f6b;
+  --color-neutral-600: #6d6f6b;
+  --color-neutral-700: #4e504d;
+  --color-neutral-800: #454644;
+  --color-neutral-900: #3d3d3c;
+  --color-neutral-950: #252725;
+
+  /* ============================================
+     SEMANTIC COLORS
+     ============================================ */
+  --color-success: var(--color-secondary-olive);
+  --color-error: var(--color-secondary-red-brown);
+  --color-warning: var(--color-secondary-clear-brown);
+  --color-info: var(--color-secondary-mint);
+
+  /* ============================================
+     BACKGROUND & SURFACE
+     ============================================ */
+  --color-background: #f7f7f7;
+  --color-surface: #ffffff;
+  --color-border: var(--color-neutral-200);
+
+  /* ============================================
+     TEXT COLORS
+     ============================================ */
+  --color-text-primary: var(--color-neutral-950);
+  --color-text-secondary: var(--color-neutral-500);
+  --color-text-tertiary: var(--color-neutral-400);
+  --color-text-inverse: #ffffff;
+
+  /* ============================================
+     SPACING
+     ============================================ */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+  --spacing-20: 5rem;
+  --spacing-24: 6rem;
+
+  /* ============================================
+     BORDER RADIUS
+     ============================================ */
+  --radius-sm: 0.125rem;
+  --radius-base: 0.25rem;
+  --radius-md: 0.375rem;
+  --radius-lg: 0.5rem;
+  --radius-xl: 0.75rem;
+  --radius-2xl: 1rem;
+  --radius-3xl: 1.5rem;
+  --radius-full: 9999px;
+
+  /* ============================================
+     SHADOWS
+     ============================================ */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.1), 0 1px 2px -1px rgba(0, 0, 0, 0.1);
+  --shadow-base: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.1);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
+
+  /* ============================================
+     TYPOGRAPHY
+     ============================================ */
+  --font-family-sans: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+
+  /* ============================================
+     TRANSITIONS
+     ============================================ */
+  --transition-fast: 150ms;
+  --transition-base: 200ms;
+  --transition-slow: 300ms;
+  --transition-timing: ease-in-out;
+
+  /* ============================================
+     COMPONENT SIZES
+     ============================================ */
+  --sidebar-width: 261px;
+  --sidebar-collapsed-width: 80px;
+  --header-height: 71px;
+  --button-height-sm: 32px;
+  --button-height-md: 40px;
+  --button-height-lg: 48px;
+
+  /* ============================================
+     Z-INDEX
+     ============================================ */
+  --z-dropdown: 1000;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-modal-backdrop: 1040;
+  --z-modal: 1050;
+  --z-popover: 1060;
+  --z-tooltip: 1070;
+}
+
+/* ============================================
+   DARK MODE SUPPORT
+   ============================================ */
+[data-theme='dark'] {
+  --color-background: #1a1a1a;
+  --color-surface: #252725;
+  --color-border: var(--color-neutral-800);
+  --color-text-primary: #ffffff;
+  --color-text-secondary: var(--color-neutral-300);
+  --color-text-tertiary: var(--color-neutral-400);
+  --color-text-inverse: var(--color-neutral-950);
+
+  /* Adjust shadows for dark mode */
+  --shadow-xs: 0 1px 2px 0 rgba(0, 0, 0, 0.3);
+  --shadow-sm: 0 1px 3px 0 rgba(0, 0, 0, 0.4), 0 1px 2px -1px rgba(0, 0, 0, 0.4);
+  --shadow-base: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 10px 15px -3px rgba(0, 0, 0, 0.4), 0 4px 6px -4px rgba(0, 0, 0, 0.4);
+  --shadow-lg: 0 20px 25px -5px rgba(0, 0, 0, 0.4), 0 8px 10px -6px rgba(0, 0, 0, 0.4);
+}
+
+/* ============================================
+   RTL SUPPORT
+   ============================================ */
+[dir='rtl'] {
+  /* RTL-specific adjustments will be added as needed */
+  direction: rtl;
+}

@@ -1,16 +1,16 @@
-"use client";
+'use client';
 
-import { useParams } from "next/navigation";
-import { useTransition } from "react";
-import { useRouter, usePathname } from "@/i18n/routing";
-import { Button } from "@/components/ui/button";
-import { Globe } from "lucide-react";
+import { useParams } from 'next/navigation';
+import { useTransition } from 'react';
+import { useRouter, usePathname } from '@/i18n/routing';
+import { Button } from '@/components/ui/button';
+import { Globe } from 'lucide-react';
 import {
   DropdownMenu,
   DropdownMenuContent,
   DropdownMenuItem,
   DropdownMenuTrigger,
-} from "@/components/ui/dropdown-menu";
+} from '@/components/ui/dropdown-menu';
 
 export function LanguageSwitcher() {
   const router = useRouter();
@@ -28,30 +28,24 @@ export function LanguageSwitcher() {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button
-          variant="outline"
-          size="icon"
-          className="w-8 h-8 lg:w-9 lg:h-9 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700"
+        <button
+          className="bg-white dark:bg-gray-800 rounded-[4px] w-[35px] h-[35px] flex items-center justify-center hover:bg-gray-50 dark:hover:bg-gray-700 transition-colors disabled:opacity-50"
           disabled={isPending}
         >
-          <Globe className="w-4 h-4 lg:w-5 lg:h-5 text-gray-600 dark:text-gray-400" />
+          <Globe className="w-6 h-6 text-gray-600 dark:text-gray-400" />
           <span className="sr-only">Switch language</span>
-        </Button>
+        </button>
       </DropdownMenuTrigger>
       <DropdownMenuContent align="end">
         <DropdownMenuItem
-          onClick={() => onSelectChange("en")}
-          className={
-            currentLocale === "en" ? "bg-gray-100 dark:bg-gray-800" : ""
-          }
+          onClick={() => onSelectChange('en')}
+          className={currentLocale === 'en' ? 'bg-gray-100 dark:bg-gray-800' : ''}
         >
           <span className="mr-2">🇬🇧</span> English
         </DropdownMenuItem>
         <DropdownMenuItem
-          onClick={() => onSelectChange("ar")}
-          className={
-            currentLocale === "ar" ? "bg-gray-100 dark:bg-gray-800" : ""
-          }
+          onClick={() => onSelectChange('ar')}
+          className={currentLocale === 'ar' ? 'bg-gray-100 dark:bg-gray-800' : ''}
         >
           <span className="mr-2">🇸🇦</span> العربية
         </DropdownMenuItem>

@@ -1,8 +1,9 @@
-"use client";
+'use client';
 
-import { useTranslations } from "next-intl";
-import { cn } from "@/lib/utils";
-import { useIsRTL } from "@/lib/use-rtl";
+import { useTranslations } from 'next-intl';
+import { cn } from '@/lib/utils';
+import { useIsRTL } from '@/lib/use-rtl';
+import Link from 'next/link';
 import {
   LayoutDashboard,
   Users,
@@ -15,7 +16,7 @@ import {
   Calendar,
   DollarSign,
   StarIcon,
-} from "lucide-react";
+} from 'lucide-react';
 
 interface SidebarItem {
   key: string;
@@ -34,142 +35,118 @@ interface AdminSidebarProps {
 
 export function AdminSidebar({
   className,
-  activeItem = "dashboard",
+  activeItem = 'dashboard',
   isMobile = false,
   isOpen = true,
   onClose,
 }: AdminSidebarProps) {
-  const t = useTranslations("dashboard");
+  const t = useTranslations('dashboard');
   const isRTL = useIsRTL();
 
   const sidebarItems: SidebarItem[] = [
     {
-      key: "title",
+      key: 'title',
       icon: LayoutDashboard,
-      href: "/dashboard",
-      active: activeItem === "dashboard",
+      href: '/dashboard',
+      active: activeItem === 'dashboard',
     },
     {
-      key: "frontDesk",
+      key: 'frontDesk',
       icon: Users,
-      href: "/dashboard/front-desk",
-      active: activeItem === "frontDesk",
+      href: '/dashboard/front-desk',
+      active: activeItem === 'frontDesk',
     },
     {
-      key: "reservation",
+      key: 'reservation',
       icon: CalendarCheck,
-      href: "/dashboard/reservations",
-      active: activeItem === "reservation",
+      href: '/dashboard/reservations',
+      active: activeItem === 'reservation',
     },
     {
-      key: "rooms",
+      key: 'rooms',
       icon: Home,
-      href: "/dashboard/rooms",
-      active: activeItem === "rooms",
+      href: '/dashboard/rooms',
+      active: activeItem === 'rooms',
     },
     {
-      key: "guests",
+      key: 'guests',
       icon: UserCheck,
-      href: "/dashboard/guests",
-      active: activeItem === "guests",
+      href: '/dashboard/guests',
+      active: activeItem === 'guests',
     },
     {
-      key: "staff",
+      key: 'staff',
       icon: UsersRound,
-      href: "/dashboard/staff",
-      active: activeItem === "staff",
+      href: '/dashboard/staff',
+      active: activeItem === 'staff',
     },
     {
-      key: "housekeeping",
+      key: 'housekeeping',
       icon: Star,
-      href: "/dashboard/housekeeping",
-      active: activeItem === "housekeeping",
+      href: '/dashboard/housekeeping',
+      active: activeItem === 'housekeeping',
     },
     {
-      key: "inventory",
+      key: 'inventory',
       icon: Package,
-      href: "/dashboard/inventory",
-      active: activeItem === "inventory",
+      href: '/dashboard/inventory',
+      active: activeItem === 'inventory',
     },
     {
-      key: "calendar",
+      key: 'calendar',
       icon: Calendar,
-      href: "/dashboard/calendar",
-      active: activeItem === "calendar",
+      href: '/dashboard/calendar',
+      active: activeItem === 'calendar',
     },
     {
-      key: "financials",
+      key: 'financials',
       icon: DollarSign,
-      href: "/dashboard/financials",
-      active: activeItem === "financials",
+      href: '/dashboard/financials',
+      active: activeItem === 'financials',
     },
     {
-      key: "reviews",
+      key: 'reviews',
       icon: StarIcon,
-      href: "/dashboard/reviews",
-      active: activeItem === "reviews",
+      href: '/dashboard/reviews',
+      active: activeItem === 'reviews',
     },
   ];
 
   return (
-    <>
-      {/* Mobile overlay */}
-      {isMobile && isOpen && (
-        <div
-          className="fixed inset-0 bg-black bg-opacity-50 z-40 lg:hidden"
-          onClick={onClose}
-        />
+    <aside
+      className={cn(
+        'bg-white dark:bg-gray-900 border-r border-gray-200 dark:border-gray-800 rounded-tr-[10px] rounded-br-[10px] w-[261px] h-full flex flex-col',
+        className
       )}
-
-      <div
-        className={cn(
-          "bg-white dark:bg-gray-900 dark:border-gray-800 overflow-hidden relative w-[261px] h-full transition-transform duration-300 ease-in-out",
-          // RTL: border-left and rounded-left corners, LTR: border-right and rounded-right corners
-          isRTL
-            ? "border-l border-gray-200 rounded-bl-[10px] rounded-tl-[10px]"
-            : "border-r border-gray-200 rounded-br-[10px] rounded-tr-[10px]",
-          // Mobile positioning
-          isMobile &&
-            isRTL &&
-            "fixed right-0 top-0 z-50 lg:relative lg:translate-x-0",
-          isMobile &&
-            !isRTL &&
-            "fixed left-0 top-0 z-50 lg:relative lg:translate-x-0",
-          // Mobile slide animation
-          isMobile && !isOpen && isRTL && "translate-x-full",
-          isMobile && !isOpen && !isRTL && "-translate-x-full",
-          className
-        )}
-      >
-        {/* Logo */}
-        <div className="flex items-center justify-center p-4 border-b border-gray-200 dark:border-gray-800">
-          <h1 className="font-bold text-2xl text-amber-800 dark:text-amber-400 font-serif">
-            TAMAK
-          </h1>
-        </div>
-
-        {/* Navigation */}
-        <div className="flex flex-col gap-2 p-4 pt-6">
-          {sidebarItems.map((item) => {
-            const Icon = item.icon;
-            return (
-              <a
-                key={item.key}
-                href={item.href}
-                className={cn(
-                  "flex items-center gap-3 px-4 py-3 rounded-lg text-sm font-medium transition-colors",
-                  item.active
-                    ? "bg-amber-700 dark:bg-amber-800 text-white"
-                    : "text-gray-600 dark:text-gray-400 hover:text-amber-800 dark:hover:text-amber-400 hover:bg-gray-100 dark:hover:bg-gray-800"
-                )}
-              >
-                <Icon className="w-5 h-5 shrink-0" />
-                <span>{t(item.key)}</span>
-              </a>
-            );
-          })}
-        </div>
+    >
+      {/* Logo */}
+      <div className="flex items-center justify-center p-4 border-b border-[#f2f2f2] h-[71px]">
+        <h1
+          className="text-[28px] font-bold text-[#5d3f36]"
+          style={{ fontFamily: 'Caladea, serif' }}
+        >
+          LOGO
+        </h1>
       </div>
-    </>
+
+      {/* Navigation */}
+      <nav className="flex-1 px-4 py-5 space-y-2">
+        {sidebarItems.map((item) => (
+          <Link
+            key={item.key}
+            href={item.href}
+            className={cn(
+              'flex items-center gap-2.5 px-4 py-2 rounded-lg text-[18px] font-medium transition-colors',
+              item.active
+                ? 'bg-[#ad8662] text-white'
+                : 'text-[#afb2ae] hover:bg-gray-50 dark:hover:bg-gray-800'
+            )}
+          >
+            <item.icon className="w-5 h-5" />
+            <span>{t(item.key)}</span>
+          </Link>
+        ))}
+      </nav>
+    </aside>
   );
 }
