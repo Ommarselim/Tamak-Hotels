@@ -36,7 +36,7 @@ export function DashboardLayout({
       title: t("newBooking"),
       value: "60",
       icon: (
-        <CalendarCheck className="h-6 w-6 text-gray-600 dark:text-gray-400" />
+        <CalendarCheck className="h-6 w-6" style={{ color: '#6D6F6B' }} />
       ),
       trend: {
         value: "1.71%",
@@ -44,37 +44,41 @@ export function DashboardLayout({
         label: t("fromLastMonth"),
       },
       variant: "highlighted" as const,
+      trendColor: undefined, // Uses default clearBrown for positive
     },
     {
       title: t("checkIn"),
       value: "56",
-      icon: <LogIn className="h-6 w-6 text-gray-600 dark:text-gray-400" />,
+      icon: <LogIn className="h-6 w-6" style={{ color: '#6D6F6B' }} />,
       trend: {
         value: "1.71%",
         isPositive: true,
         label: t("fromLastMonth"),
       },
+      trendColor: "clearBrown" as const,
     },
     {
       title: t("checkOut"),
       value: "50",
-      icon: <LogOut className="h-6 w-6 text-gray-600 dark:text-gray-400" />,
+      icon: <LogOut className="h-6 w-6" style={{ color: '#6D6F6B' }} />,
       trend: {
         value: "1.71%",
         isPositive: false,
         label: t("fromLastMonth"),
       },
+      trendColor: "olive" as const, // Green for checkout
     },
     {
       title: t("totalRevenue"),
       value: "14.785",
       currency: "SAR",
-      icon: <DollarSign className="h-6 w-6 text-gray-600 dark:text-gray-400" />,
+      icon: <DollarSign className="h-6 w-6" style={{ color: '#6D6F6B' }} />,
       trend: {
         value: "1.71%",
         isPositive: true,
         label: t("fromLastMonth"),
       },
+      trendColor: "clearBrown" as const,
     },
   ];
 
@@ -108,6 +112,7 @@ export function DashboardLayout({
                 icon={stat.icon}
                 trend={stat.trend}
                 variant={stat.variant}
+                trendColor={stat.trendColor}
               />
             ))}
           </div>
