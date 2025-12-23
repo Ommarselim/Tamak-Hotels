@@ -1,0 +1,11 @@
+export { RoomsPage } from './rooms-page';
+export { RoomsHeader } from './rooms-header';
+export { RoomsList } from './rooms-list';
+export { RoomCard } from './room-card';
+export { RoomDetailPanel } from './room-detail-panel';
+export { RoomGallery } from './room-gallery';
+export { RoomFeatures } from './room-features';
+export { RoomFacilities } from './room-facilities';
+export { RoomRating } from './room-rating';
+export { RoomReviews } from './room-reviews';
+export { AddRoomModal } from './add-room-modal';

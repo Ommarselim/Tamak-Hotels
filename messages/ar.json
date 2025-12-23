@@ -105,5 +105,125 @@
     "cancel": "إلغاء",
     "next": "التالي",
     "submitData": "إرسال البيانات"
+  },
+  "rooms": {
+    "title": "الغرف",
+    "room": "غرفة",
+    "addRoomButton": "إضافة غرفة",
+    "searchPlaceholder": "ابحث بنوع الغرفة، السعر، المميزات....إلخ",
+    "noRooms": "لا توجد غرف",
+    "noRoomsDescription": "حاول تعديل الفلاتر أو إضافة غرفة جديدة",
+    "selectRoom": "اختر غرفة",
+    "selectRoomDescription": "انقر على غرفة من القائمة لعرض التفاصيل",
+    "edit": "تعديل",
+    "availableFrom": "متاحة من",
+    "to": "إلى",
+    "bed": "سرير",
+    "bed_one": "سرير",
+    "bed_other": "أسرة",
+    "person": "شخص",
+    "person_one": "شخص",
+    "person_other": "أشخاص",
+    "filters": {
+      "price": "السعر",
+      "roomStatus": "حالة الغرفة",
+      "allTypes": "جميع الأنواع",
+      "allPrices": "جميع الأسعار",
+      "lowPrice": "منخفض (< ٢٠٠ ريال)",
+      "mediumPrice": "متوسط (٢٠٠-٥٠٠ ريال)",
+      "highPrice": "مرتفع (> ٥٠٠ ريال)",
+      "allStatus": "جميع الحالات"
+    },
+    "status": {
+      "available": "متاحة",
+      "occupied": "مشغولة",
+      "maintenance": "صيانة",
+      "reserved": "محجوزة"
+    },
+    "types": {
+      "single": "فردية",
+      "double": "مزدوجة",
+      "suite": "جناح",
+      "deluxe": "فاخرة",
+      "family": "عائلية"
+    },
+    "features": {
+      "title": "المميزات",
+      "singleBed": "سرير فردي مناسب لشخص واحد",
+      "privateBathroom": "حمام خاص مع دش",
+      "workDesk": "مكتب عمل مع كرسي ووسائل راحة أساسية (واي فاي، إضاءة)"
+    },
+    "facilities": {
+      "title": "المرافق",
+      "wifi": "واي فاي عالي السرعة",
+      "safetyBox": "صندوق أمان",
+      "airConditioning": "تكييف هواء",
+      "flatScreenTV": "تلفزيون بشاشة مسطحة",
+      "miniFridge": "ثلاجة صغيرة",
+      "coffeeTeaMaker": "آلة صنع القهوة والشاي",
+      "jacuzzi": "جاكوزي",
+      "ironingBoard": "لوح كي",
+      "blackoutCurtains": "ستائر معتمة"
+    },
+    "rating": {
+      "title": "التقييم",
+      "excellent": "ممتاز",
+      "impressive": "رائع",
+      "good": "جيد",
+      "average": "متوسط",
+      "poor": "ضعيف",
+      "fromReviews": "من {count} تقييم",
+      "facilities": "المرافق",
+      "services": "الخدمات",
+      "comfort": "الراحة",
+      "location": "الموقع"
+    },
+    "reviews": {
+      "title": "التقييمات",
+      "showAll": "عرض الكل",
+      "showLess": "عرض أقل",
+      "nights": "{count} ليالي",
+      "nights_one": "ليلة واحدة",
+      "nights_other": "{count} ليالي"
+    },
+    "addRoomModal": {
+      "title": "إضافة غرفة جديدة",
+      "relatedHotel": "الفندق المرتبط",
+      "hotelNamePlaceholder": "اسم الفندق |",
+      "roomType": "نوع الغرفة",
+      "roomStatus": "حالة الغرفة",
+      "roomNumber": "رقم الغرفة",
+      "viewType": "نوع الإطلالة",
+      "capacity": "السعة",
+      "numberOfBeds": "عدد الأسرة",
+      "area": "المساحة",
+      "pricePerDay": "السعر/يوم",
+      "cover": "الصورة الرئيسية",
+      "gallery": "معرض الصور",
+      "uploadCover": "رفع صورة رئيسية",
+      "uploadImages": "رفع صور",
+      "facilities": "المرافق",
+      "features": "المميزات",
+      "optional": "اختياري",
+      "saveToDraft": "حفظ كمسودة",
+      "addRoom": "إضافة غرفة",
+      "addMoreFacilities": "إضافة المزيد من المرافق",
+      "facilityLabels": {
+        "wifi": "واي فاي عالي السرعة",
+        "safetyBox": "صندوق أمان",
+        "airConditioning": "تكييف هواء",
+        "flatScreenTV": "تلفزيون بشاشة مسطحة",
+        "miniFridge": "ثلاجة صغيرة",
+        "coffeeTeaMaker": "آلة صنع القهوة والشاي",
+        "jacuzzi": "جاكوزي",
+        "ironingBoard": "لوح كي",
+        "blackoutCurtains": "ستائر معتمة"
+      },
+      "featureLabels": {
+        "singleBed": "سرير فردي مناسب لشخص واحد",
+        "privateBathroom": "حمام خاص مع دش",
+        "workDesk": "مكتب عمل مع كرسي ووسائل راحة أساسية (واي فاي، إضاءة)"
+      }
+    }
   }
 }

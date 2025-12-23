@@ -90,7 +90,7 @@ export function AdminSidebar({
     {
       key: 'rooms',
       icon: Home,
-      href: '/dashboard/rooms',
+      href: '/rooms',
       active: activeItem === 'rooms',
     },
     {

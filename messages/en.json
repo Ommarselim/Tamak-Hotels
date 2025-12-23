@@ -105,5 +105,125 @@
     "cancel": "Cancel",
     "next": "Next",
     "submitData": "Submit data"
+  },
+  "rooms": {
+    "title": "Rooms",
+    "room": "Room",
+    "addRoomButton": "Add Room",
+    "searchPlaceholder": "Search with room type, Price, features....etc",
+    "noRooms": "No Rooms Found",
+    "noRoomsDescription": "Try adjusting your filters or add a new room",
+    "selectRoom": "Select a Room",
+    "selectRoomDescription": "Click on a room from the list to view details",
+    "edit": "Edit",
+    "availableFrom": "Available From",
+    "to": "to",
+    "bed": "Bed",
+    "bed_one": "Bed",
+    "bed_other": "Beds",
+    "person": "Person",
+    "person_one": "Person",
+    "person_other": "Persons",
+    "filters": {
+      "price": "Price",
+      "roomStatus": "Room Status",
+      "allTypes": "All Type",
+      "allPrices": "All Prices",
+      "lowPrice": "Low (< 200 SAR)",
+      "mediumPrice": "Medium (200-500 SAR)",
+      "highPrice": "High (> 500 SAR)",
+      "allStatus": "All Status"
+    },
+    "status": {
+      "available": "Available",
+      "occupied": "Occupied",
+      "maintenance": "Maintenance",
+      "reserved": "Reserved"
+    },
+    "types": {
+      "single": "Single",
+      "double": "Double",
+      "suite": "Suite",
+      "deluxe": "Deluxe",
+      "family": "Family"
+    },
+    "features": {
+      "title": "Features",
+      "singleBed": "Single bed suitable for one guest",
+      "privateBathroom": "Private en-suite bathroom with shower",
+      "workDesk": "Work desk with chair and basic amenities (Wi-Fi, lighting)"
+    },
+    "facilities": {
+      "title": "Facilities",
+      "wifi": "High-speed Wi-Fi",
+      "safetyBox": "Safety box",
+      "airConditioning": "Air conditioning",
+      "flatScreenTV": "Flat-Screen TV",
+      "miniFridge": "Mini-fridge",
+      "coffeeTeaMaker": "Coffee-tea maker",
+      "jacuzzi": "Jacuzzi",
+      "ironingBoard": "Ironing Board",
+      "blackoutCurtains": "Blackout Curtains"
+    },
+    "rating": {
+      "title": "Rating",
+      "excellent": "Excellent",
+      "impressive": "Impressive",
+      "good": "Good",
+      "average": "Average",
+      "poor": "Poor",
+      "fromReviews": "from {count} reviews",
+      "facilities": "Facilities",
+      "services": "Services",
+      "comfort": "Comfort",
+      "location": "Location"
+    },
+    "reviews": {
+      "title": "Reviews",
+      "showAll": "Show all",
+      "showLess": "Show less",
+      "nights": "{count} nights",
+      "nights_one": "{count} night",
+      "nights_other": "{count} nights"
+    },
+    "addRoomModal": {
+      "title": "Add New Room",
+      "relatedHotel": "Related hotel",
+      "hotelNamePlaceholder": "Hotel name |",
+      "roomType": "Room type",
+      "roomStatus": "Room Status",
+      "roomNumber": "Room number",
+      "viewType": "View type",
+      "capacity": "Capacity",
+      "numberOfBeds": "Number of beds",
+      "area": "Area",
+      "pricePerDay": "Price/day",
+      "cover": "Cover",
+      "gallery": "Gallery",
+      "uploadCover": "Upload cover",
+      "uploadImages": "Upload images",
+      "facilities": "Facilities",
+      "features": "Features",
+      "optional": "Optional",
+      "saveToDraft": "Save to draft",
+      "addRoom": "Add Room",
+      "addMoreFacilities": "Add more facilities",
+      "facilityLabels": {
+        "wifi": "High-speed Wi-Fi",
+        "safetyBox": "Safety box",
+        "airConditioning": "Air conditioning",
+        "flatScreenTV": "Flat-Screen TV",
+        "miniFridge": "Mini-fridge",
+        "coffeeTeaMaker": "Coffee-tea maker",
+        "jacuzzi": "Jacuzzi",
+        "ironingBoard": "Ironing Board",
+        "blackoutCurtains": "Blackout Curtains"
+      },
+      "featureLabels": {
+        "singleBed": "Single bed suitable for one guest",
+        "privateBathroom": "Private en-suite bathroom with shower",
+        "workDesk": "Work desk with chair and basic amenities (Wi-Fi, lighting)"
+      }
+    }
   }
 }
