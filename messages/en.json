@@ -68,5 +68,42 @@
     "bookingDate": "Booking Date",
     "amount": "Total Amount",
     "paymentStatus": "Payment Status"
+  },
+  "frontDesk": {
+    "title": "Front Desk",
+    "autoUpdates": "Auto-updates in 40 Sec",
+    "searchPlaceholder": "Search with room type, Price, features....etc",
+    "addBook": "Add Book",
+    "available": "Available",
+    "single": "Single",
+    "double": "Double",
+    "triple": "Triple",
+    "suite": "Suite",
+    "dateRange": "30 days of December 2025"
+  },
+  "booking": {
+    "roomInformation": "Room information",
+    "guestInformation": "Guest information",
+    "checkIn": "Check-in",
+    "checkOut": "Check out",
+    "nightsNumber": "Nights number",
+    "roomType": "Room type",
+    "roomNumber": "Room number",
+    "guestsNumber": "Guests number",
+    "guestInformationNumber": "Guest {number} information",
+    "fullName": "Full name",
+    "asWrittenOnGuestId": "As written on the guest's personal ID",
+    "guestType": "Guest type",
+    "dateOfBirth": "Date of birth",
+    "id": "ID",
+    "nationalIdPlaceholder": "National id / passport number",
+    "gender": "Gender",
+    "country": "Country",
+    "nationality": "Nationality",
+    "phoneNumber": "Phone number",
+    "email": "Email",
+    "cancel": "Cancel",
+    "next": "Next",
+    "submitData": "Submit data"
   }
 }

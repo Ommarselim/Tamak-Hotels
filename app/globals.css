@@ -206,3 +206,9 @@
 .layout-main {
   @apply bg-gray-50 dark:bg-gray-900;
 }
+
+/* Front Desk Calendar Grid */
+.grid-cols-30 {
+  display: grid;
+  grid-template-columns: repeat(30, minmax(0, 1fr));
+}

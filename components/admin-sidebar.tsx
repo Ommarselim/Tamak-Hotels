@@ -78,7 +78,7 @@ export function AdminSidebar({
     {
       key: 'frontDesk',
       icon: Users,
-      href: '/dashboard/front-desk',
+      href: '/front-desk',
       active: activeItem === 'frontDesk',
     },
     {

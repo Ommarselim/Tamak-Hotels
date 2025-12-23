@@ -68,5 +68,42 @@
     "bookingDate": "تاريخ الحجز",
     "amount": "المبلغ الإجمالي",
     "paymentStatus": "حالة الدفع"
+  },
+  "frontDesk": {
+    "title": "مكتب الاستقبال",
+    "autoUpdates": "تحديث تلقائي في ٤٠ ثانية",
+    "searchPlaceholder": "ابحث بنوع الغرفة، السعر، المميزات....إلخ",
+    "addBook": "إضافة حجز",
+    "available": "متاحة",
+    "single": "فردية",
+    "double": "مزدوجة",
+    "triple": "ثلاثية",
+    "suite": "جناح",
+    "dateRange": "٣٠ يوم من ديسمبر ٢٠٢٥"
+  },
+  "booking": {
+    "roomInformation": "معلومات الغرفة",
+    "guestInformation": "معلومات النزيل",
+    "checkIn": "تسجيل الوصول",
+    "checkOut": "تسجيل المغادرة",
+    "nightsNumber": "عدد الليالي",
+    "roomType": "نوع الغرفة",
+    "roomNumber": "رقم الغرفة",
+    "guestsNumber": "عدد النزلاء",
+    "guestInformationNumber": "معلومات النزيل {number}",
+    "fullName": "الاسم الكامل",
+    "asWrittenOnGuestId": "كما هو مكتوب في الهوية الشخصية",
+    "guestType": "نوع النزيل",
+    "dateOfBirth": "تاريخ الميلاد",
+    "id": "الهوية",
+    "nationalIdPlaceholder": "رقم الهوية / جواز السفر",
+    "gender": "الجنس",
+    "country": "البلد",
+    "nationality": "الجنسية",
+    "phoneNumber": "رقم الهاتف",
+    "email": "البريد الإلكتروني",
+    "cancel": "إلغاء",
+    "next": "التالي",
+    "submitData": "إرسال البيانات"
   }
 }
