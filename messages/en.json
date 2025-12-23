@@ -43,9 +43,30 @@
     "checkOutDate": "Check-out",
     "status": "Status",
     "confirmed": "Confirmed",
-    "pending": "Pending"
+    "pending": "Pending",
+    "reservations": "Reservations",
+    "booked": "Booked",
+    "canceled": "Canceled",
+    "bookingMethod": "Booking Method",
+    "website": "Website",
+    "onsite": "Onsite",
+    "booking": "Booking",
+    "overallRating": "Overall Rating",
+    "impressive": "Impressive",
+    "fromReviews": "from {count} review",
+    "facilities": "Facilities",
+    "services": "Services",
+    "comfort": "Comfort",
+    "location": "Location",
+    "tasks": "Tasks",
+    "recentActivities": "Recent Activities",
+    "bookingList": "Booking List",
+    "searchGuest": "Search gust name or room type..",
+    "guestName": "Guest Name",
+    "roomNumber": "Room No.",
+    "roomType": "Room Type",
+    "bookingDate": "Booking Date",
+    "amount": "Total Amount",
+    "paymentStatus": "Payment Status"
   }
 }
-
-
-

@@ -31,7 +31,7 @@ export function DashboardHeader({
   return (
     <div
       className={cn(
-        'flex items-center justify-between gap-[22px] px-6 py-6 bg-[#f7f7f7] dark:bg-gray-900',
+        'flex items-center justify-between gap-2 sm:gap-3 lg:gap-[22px] px-3 sm:px-4 lg:px-6 py-3 sm:py-4 lg:py-6 bg-[#f7f7f7] dark:bg-gray-900',
         className
       )}
     >
@@ -41,27 +41,29 @@ export function DashboardHeader({
       </Button>
 
       {/* Left side - Title and Search */}
-      <div className="flex items-center gap-6 flex-1 min-w-0">
+      <div className="flex items-center gap-3 lg:gap-6 flex-1 min-w-0">
         {/* Title Section */}
-        <div className="flex flex-col gap-1 min-w-0 w-[169px]">
-          <h1 className="text-[32px] font-semibold text-black dark:text-white leading-normal">
+        <div className="flex flex-col gap-1 min-w-0 flex-shrink-0">
+          <h1 className="text-xl sm:text-2xl lg:text-[32px] font-semibold text-black dark:text-white leading-normal truncate">
             {title || t('title')}
           </h1>
-          <p className="text-sm text-[#a1a1a1] dark:text-gray-500">{subtitle || t('helloAdmin')}</p>
+          <p className="text-xs sm:text-sm text-[#a1a1a1] dark:text-gray-500 truncate">
+            {subtitle || t('helloAdmin')}
+          </p>
         </div>
 
         {/* Search Input */}
-        <div className="hidden md:flex items-center gap-2.5 bg-white dark:bg-gray-800 border border-[#e9eaec] dark:border-gray-700 rounded-[10px] px-5 py-2.5 w-[392px]">
-          <Search className="w-5 h-5 text-[#737373] dark:text-gray-500" />
+        <div className="hidden md:flex items-center gap-2.5 bg-white dark:bg-gray-800 border border-[#e9eaec] dark:border-gray-700 rounded-[10px] px-5 py-2.5 flex-1 max-w-md">
+          <Search className="w-5 h-5 text-[#737373] dark:text-gray-500 flex-shrink-0" />
           <input
             type="text"
             placeholder={t('searchPlaceholder')}
-            className="flex-1 text-sm text-[#737373] dark:text-gray-300 bg-transparent outline-none placeholder:text-[#737373] dark:placeholder:text-gray-500"
+            className="flex-1 text-sm text-[#737373] dark:text-gray-300 bg-transparent outline-none placeholder:text-[#737373] dark:placeholder:text-gray-500 min-w-0"
           />
         </div>
 
         {/* Date Range Picker */}
-        <div className="hidden lg:flex items-center gap-2.5 bg-white dark:bg-gray-800 border border-[#e9eaec] dark:border-gray-700 rounded-[10px] px-5 py-2.5">
+        <div className="hidden lg:flex items-center gap-2.5 bg-white dark:bg-gray-800 border border-[#e9eaec] dark:border-gray-700 rounded-[10px] px-5 py-2.5 flex-shrink-0">
           <span className="text-sm text-[#737373] dark:text-gray-300 whitespace-nowrap">
             {t('dateRange')}
           </span>
@@ -70,10 +72,10 @@ export function DashboardHeader({
       </div>
 
       {/* Right side - User Profile and Actions */}
-      <div className="flex items-center gap-5">
+      <div className="flex items-center gap-2 sm:gap-3 lg:gap-5 flex-shrink-0">
         {/* User Profile */}
         <div className="flex items-center gap-1.5">
-          <div className="w-12 h-12 rounded-full bg-gray-300 dark:bg-gray-700 overflow-hidden">
+          <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-gray-300 dark:bg-gray-700 overflow-hidden flex-shrink-0">
             {userAvatar ? (
               <img src={userAvatar} alt={userName} className="w-full h-full object-cover" />
             ) : (
@@ -82,25 +84,31 @@ export function DashboardHeader({
               </div>
             )}
           </div>
-          <div className="hidden sm:flex flex-col gap-1">
+          <div className="hidden sm:flex flex-col gap-1 min-w-0">
             <div className="flex items-center gap-0.5">
-              <span className="text-sm font-medium text-[#080808] dark:text-gray-100">
+              <span className="text-sm font-medium text-[#080808] dark:text-gray-100 truncate max-w-[120px]">
                 {userName}
               </span>
-              <ChevronDown className="w-4 h-4 text-gray-400 dark:text-gray-500" />
+              <ChevronDown className="w-4 h-4 text-gray-400 dark:text-gray-500 flex-shrink-0" />
             </div>
-            <span className="text-sm text-gray-400 dark:text-gray-500">{userRole}</span>
+            <span className="text-xs sm:text-sm text-gray-400 dark:text-gray-500 truncate">
+              {userRole}
+            </span>
           </div>
         </div>
 
         {/* Action Buttons */}
         <div className="flex items-center gap-1 lg:gap-2">
-          <ThemeSwitcher />
-          <LanguageSwitcher />
+          <div className="hidden sm:flex">
+            <ThemeSwitcher />
+          </div>
+          <div className="hidden sm:flex">
+            <LanguageSwitcher />
+          </div>
           <Button
             variant="outline"
             size="icon"
-            className="w-8 h-8 lg:w-9 lg:h-9 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 relative"
+            className="w-8 h-8 lg:w-9 lg:h-9 bg-white dark:bg-gray-800 border-gray-200 dark:border-gray-700 relative flex-shrink-0"
           >
             <Bell className="w-4 h-4 lg:w-5 lg:h-5 text-gray-600 dark:text-gray-400" />
             <div className="absolute top-1 right-1 lg:top-2 lg:right-2 w-2 h-2 bg-red-500 rounded-full" />

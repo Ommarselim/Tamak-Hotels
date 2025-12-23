@@ -43,9 +43,30 @@
     "checkOutDate": "تاريخ المغادرة",
     "status": "الحالة",
     "confirmed": "مؤكد",
-    "pending": "في الانتظار"
+    "pending": "قيد الانتظار",
+    "reservations": "الحجوزات",
+    "booked": "محجوز",
+    "canceled": "ملغي",
+    "bookingMethod": "طريقة الحجز",
+    "website": "الموقع الإلكتروني",
+    "onsite": "في الموقع",
+    "booking": "حجز",
+    "overallRating": "التقييم الإجمالي",
+    "impressive": "مُبهر",
+    "fromReviews": "من {count} تقييم",
+    "facilities": "المرافق",
+    "services": "الخدمات",
+    "comfort": "الراحة",
+    "location": "الموقع",
+    "tasks": "المهام",
+    "recentActivities": "الأنشطة الأخيرة",
+    "bookingList": "قائمة الحجوزات",
+    "searchGuest": "ابحث عن اسم النزيل أو نوع الغرفة..",
+    "guestName": "اسم النزيل",
+    "roomNumber": "رقم الغرفة",
+    "roomType": "نوع الغرفة",
+    "bookingDate": "تاريخ الحجز",
+    "amount": "المبلغ الإجمالي",
+    "paymentStatus": "حالة الدفع"
   }
 }
-
-
-

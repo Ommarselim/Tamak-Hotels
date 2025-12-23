@@ -78,7 +78,10 @@ export function StatsCard({
                 className="font-bold dark:text-white"
                 style={{
                   fontSize: '24px',
-                  color: variant === 'highlighted' ? colors.semantic.text.primary : colors.semantic.text.primary,
+                  color:
+                    variant === 'highlighted'
+                      ? colors.semantic.text.primary
+                      : colors.semantic.text.primary,
                   lineHeight: 'normal',
                 }}
               >
@@ -118,10 +121,7 @@ export function StatsCard({
         {/* Trend indicator */}
         <div className="flex items-center gap-[7px]">
           <div
-            className={cn(
-              'flex items-center gap-1 px-2 py-1 text-white',
-              getTrendBadgeColor()
-            )}
+            className={cn('flex items-center gap-1 px-2 py-1 text-white', getTrendBadgeColor())}
             style={{
               borderRadius: '16px 16px 16px 12px',
             }}
