@@ -21,7 +21,7 @@ export function DashboardHeader({
   className,
   title,
   subtitle,
-  userName = 'Manar Rabie',
+  userName = 'Omar Selim',
   userRole = 'Admin',
   userAvatar,
   onMenuClick,

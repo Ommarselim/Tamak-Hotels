@@ -215,7 +215,7 @@ interface BookingFormData {
 
 - Full RTL support
 - Arabic translations for all booking fields
-- Proper Arabic text rendering (منار ربيع)
+- Proper Arabic text rendering (عمر محمد)
 
 ### Supported Languages
 

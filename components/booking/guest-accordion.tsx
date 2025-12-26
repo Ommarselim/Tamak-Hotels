@@ -56,7 +56,7 @@ export function GuestAccordion({
               type="text"
               value={guestData.fullName || ''}
               onChange={(e) => onUpdate({ fullName: e.target.value })}
-              placeholder="منار ربيع"
+              placeholder="عمر محمد"
               className="w-full h-[59px] px-4 border border-input rounded-lg bg-background text-[27px]"
             />
           </div>

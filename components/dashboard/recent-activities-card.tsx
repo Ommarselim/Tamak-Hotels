@@ -18,7 +18,7 @@ const activities = [
     icon: LogOut,
     title: 'Guest Check-Out',
     description:
-      'Manar Rabie completed check-out process and updated room availability for Room 305.',
+      'Omar Selim completed check-out process and updated room availability for Room 305.',
   },
   {
     id: 3,
@@ -26,7 +26,7 @@ const activities = [
     icon: LogOut,
     title: 'Guest Check-Out',
     description:
-      'Manar Rabie completed check-out process and updated room availability for Room 305.',
+      'Omar Selim completed check-out process and updated room availability for Room 305.',
   },
 ];
 

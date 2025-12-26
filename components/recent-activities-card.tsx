@@ -32,7 +32,7 @@ const activities: Activity[] = [
     time: '11:45AM',
     title: 'Guest Check-Out',
     description:
-      'Manar Rabie completed check-out process and updated room availability for Room 305.',
+      'Omar Selim completed check-out process and updated room availability for Room 305.',
     icon: 'checkout',
     iconBg: colors.primary[100],
   },
@@ -41,7 +41,7 @@ const activities: Activity[] = [
     time: '11:45AM',
     title: 'Guest Check-Out',
     description:
-      'Manar Rabie completed check-out process and updated room availability for Room 305.',
+      'Omar Selim completed check-out process and updated room availability for Room 305.',
     icon: 'checkout',
     iconBg: colors.primary[100],
   },

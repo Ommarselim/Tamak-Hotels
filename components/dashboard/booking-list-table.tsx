@@ -23,7 +23,7 @@ import { Badge } from '@/components/ui/badge';
 const bookings = [
   {
     id: 'LH4546',
-    guest: 'Manar Rabie',
+    guest: 'Omar Selim',
     roomType: 'Suite',
     room: 'Room 101',
     duration: '3 nights',
@@ -73,7 +73,7 @@ const bookings = [
   },
   {
     id: 'LH4546',
-    guest: 'Manar Rabie',
+    guest: 'Omar Selim',
     roomType: 'Suite',
     room: 'Room 101',
     duration: '3 nights',
